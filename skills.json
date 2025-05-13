@@ -1,4 +1,44 @@
-[
+[    
+    {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+    },
+    {
+        "name": "Django",
+        "icon": "https://img.icons8.com/color/48/000000/django.png"
+    },
+    {
+        "name": "REST API",
+        "icon": "https://img.icons8.com/color/48/000000/api.png"
+    },
+    {
+        "name": "Docker",
+        "icon": "https://img.icons8.com/color/48/000000/docker.png"
+    },
+    {
+        "name": "Kubernetes",
+        "icon": "https://img.icons8.com/color/48/000000/kubernetes.png"
+    },
+    {
+        "name": "Redis",
+        "icon": "https://img.icons8.com/color/48/000000/redis.png"
+    },
+    {
+        "name": "SQLAlchemy",
+        "icon": "https://img.icons8.com/color/48/000000/sql.png"
+    },
+    {
+        "name": "Jenkins",
+        "icon": "https://img.icons8.com/color/48/000000/jenkins.png"
+    },
+    {
+        "name": "Grafana",
+        "icon": "https://img.icons8.com/color/48/000000/grafana.png"
+    },
+    {
+        "name": "Jira",
+        "icon": "https://img.icons8.com/color/48/000000/jira.png"
+    },
     {
         "name": "ReactJS",
         "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
@@ -33,7 +73,7 @@
     },
     {
         "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
     },
     {
         "name": "Bootstrap",
@@ -67,10 +107,7 @@
         "name": "PHP",
         "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
     },
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
+
     {
         "name": "C++",
         "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
@@ -118,5 +155,6 @@
     {
         "name": "WordPress",
         "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
-    }    
+    }
+    
 ]
