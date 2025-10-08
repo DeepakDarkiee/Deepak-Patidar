@@ -423,6 +423,7 @@ header .navbar ul li a:hover {
   color: #000;
   font-weight: 600;
   padding: 1rem 0;
+  margin-bottom: 2.5rem;
 }
 .home .content p span {
   font-size: 2.5rem;
@@ -430,38 +431,65 @@ header .navbar ul li a:hover {
   font-weight: 600;
   padding: 1rem 0;
 }
+/* Enhanced Main Button */
 .home .btn {
-  margin-top: 1rem;
-  position: absolute;
+  margin-top: 3.5rem;
+  position: relative;
   line-height: 0;
   padding: 1.6rem 3rem;
-  border-radius: 4em;
-  transition: 0.5s;
+  border-radius: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+  background: linear-gradient(135deg, #2506ad 0%, #421cec 100%);
+  box-shadow: 0 8px 25px rgba(48, 68, 247, 0.3);
   font-family: "Nunito", sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
 }
+
+.home .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.home .btn:hover::before {
+  left: 100%;
+}
+
 .home .btn span {
   font-weight: 700;
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
+  position: relative;
+  z-index: 1;
 }
 .home .btn i {
   margin-left: 0.3rem;
   font-size: 1.5rem;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 .home .btn:hover {
-  background: #1a047e;
+  background: linear-gradient(135deg, #421cec 0%, #6f3eff 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(48, 68, 247, 0.4);
 }
 .home .btn:hover i {
-  transform: translateX(5px);
+  transform: translateX(8px);
 }
-/* social icons start */
+/* Enhanced Social Icons */
 .socials {
   position: relative;
-  margin-top: 9rem;
+  margin-top: 4rem;
 }
 .socials .social-icons {
   padding-left: 0;
@@ -472,57 +500,120 @@ header .navbar ul li a:hover {
   display: inline-block;
   margin-bottom: 14px;
 }
+
+/* Beautiful Enhanced Social Icons */
 .social-icons a {
   font-size: 2rem;
   display: inline-block;
   line-height: 44px;
-  color: #00d9ff;
-  background-color: #09011b;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   width: 44px;
   height: 44px;
   text-align: center;
   margin-right: 8px;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+.social-icons a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.social-icons a:hover::before {
+  left: 100%;
+}
+
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-icons a.github {
+  background: linear-gradient(135deg, #333 0%, #24292e 100%);
   color: #fff;
-  background-color: #0685da;
 }
 .social-icons a.github:hover {
-  background-color: #0e0e0e;
+  background: linear-gradient(135deg, #24292e 0%, #000 100%);
+  box-shadow: 0 8px 25px rgba(36, 41, 46, 0.4);
+}
+
+.social-icons a.twitter {
+  background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+  color: #fff;
 }
 .social-icons a.twitter:hover {
-  background-color: #00aced;
+  background: linear-gradient(135deg, #0d8bd9 0%, #0a6bb3 100%);
+  box-shadow: 0 8px 25px rgba(29, 161, 242, 0.4);
+}
+
+.social-icons a.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
+  color: #fff;
 }
 .social-icons a.linkedin:hover {
-  background-color: #007bb6;
+  background: linear-gradient(135deg, #005582 0%, #004066 100%);
+  box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+}
+
+.social-icons a.dev {
+  background: linear-gradient(135deg, #000 0%, #333 100%);
+  color: #fff;
 }
 .social-icons a.dev:hover {
-  background-color: #070707;
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.social-icons a.instagram {
+  background: linear-gradient(135deg, #e4405f 0%, #c13584 50%, #833ab4 100%);
+  color: #fff;
 }
 .social-icons a.instagram:hover {
-  background-color: #ee00da;
+  background: linear-gradient(135deg, #c13584 0%, #833ab4 50%, #5b2c87 100%);
+  box-shadow: 0 8px 25px rgba(196, 53, 132, 0.4);
+}
+
+.social-icons a.medium {
+  background: linear-gradient(135deg, #000 0%, #333 100%);
+  color: #fff;
+}
+.social-icons a.medium:hover {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 /* social icons end */
 
 /* hero media queries starts*/
 @media (max-width: 450px) {
   .home .btn {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
   .socials {
-    margin-top: 12rem;
+    margin-top: 2rem;
   }
   .home .image img {
     margin-top: -12rem;
   }
   .home .content p {
     font-size: 2.2rem;
+    margin-bottom: 2rem;
   }
   .home .content p span {
     font-size: 2.2rem;
@@ -693,33 +784,59 @@ header .navbar ul li a:hover {
   margin: 0;
 }
 
+/* Enhanced Resume Button */
 .resumebtn {
   margin-top: 4rem;
 }
 .resumebtn .btn {
   padding: 1.7rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.3s;
+  border-radius: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  background: linear-gradient(135deg, #2506ad 0%, #421cec 100%);
+  box-shadow: 0 8px 25px rgba(48, 68, 247, 0.3);
   font-family: "Nunito", sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
 }
+
+.resumebtn .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.resumebtn .btn:hover::before {
+  left: 100%;
+}
+
 .resumebtn .btn span {
   font-weight: 600;
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
+  position: relative;
+  z-index: 1;
 }
 .resumebtn .btn i {
   margin-left: 0.3rem;
   font-size: 1.2rem;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 .resumebtn .btn:hover {
-  background: #1a047e;
+  background: linear-gradient(135deg, #421cec 0%, #6f3eff 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(48, 68, 247, 0.4);
 }
 .resumebtn .btn:hover i {
-  transform: translateX(5px);
+  transform: translateX(8px);
 }
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
@@ -1249,7 +1366,7 @@ header .navbar ul li a:hover {
 .experience .content .desc p {
   font-size: 1.2rem;
 }
-/* view all button */
+/* Enhanced More/View All Button */
 .morebtn {
   display: flex;
   justify-content: center;
@@ -1258,28 +1375,52 @@ header .navbar ul li a:hover {
   position: relative;
   line-height: 0;
   padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
+  border-radius: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  background: linear-gradient(135deg, #2506ad 0%, #421cec 100%);
+  box-shadow: 0 8px 25px rgba(48, 68, 247, 0.3);
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
+
+.morebtn .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.morebtn .btn:hover::before {
+  left: 100%;
+}
+
 .morebtn .btn span {
   font-weight: 600;
   font-size: 1.7rem;
   font-family: "Nunito", sans-serif;
+  position: relative;
+  z-index: 1;
 }
 .morebtn .btn i {
   margin-left: 0.3rem;
   font-size: 1.5rem;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 .morebtn .btn:hover {
-  background: #1a047e;
+  background: linear-gradient(135deg, #421cec 0%, #6f3eff 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(48, 68, 247, 0.4);
 }
 .morebtn .btn:hover i {
-  transform: translateX(5px);
+  transform: translateX(8px);
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -1426,21 +1567,44 @@ form .button-area {
   float: right;
   flex-direction: row-reverse;
 }
+/* Enhanced Contact Form Button */
 .button-area button {
   color: #fff;
   border: none;
   outline: none;
   font-size: 1.8rem;
   cursor: pointer;
-  border-radius: 5px;
-  padding: 13px 25px;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-  transition: 0.3s ease;
+  border-radius: 1.5rem;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #2506ad 0%, #421cec 100%);
+  box-shadow: 0 8px 25px rgba(48, 68, 247, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
 }
+
+.button-area button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.button-area button:hover::before {
+  left: 100%;
+}
+
 .button-area button:hover {
-  background: #421cecf5;
+  background: linear-gradient(135deg, #421cec 0%, #6f3eff 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(48, 68, 247, 0.4);
 }
 .button-area span {
   font-size: 17px;
@@ -1452,11 +1616,12 @@ form .button-area {
   top: 6px;
   left: 2px;
   font-size: 1.5rem;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   color: #fff;
+  z-index: 1;
 }
 .button-area button:hover i {
-  left: 8px;
+  left: 10px;
 }
 /* contact section media queries starts */
 @media (max-width: 900px) {
