@@ -6,28 +6,18 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  outline: none; border: none;
+  outline: none; 
+  border: none;
   text-transform:capitalize;
   transition: all .2s linear;
 }
+
 html{
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-body{
-  background: #f7f7f7;
-  font-family: 'Poppins', sans-serif;
-}
 
-*::selection{
-  background: #2b3dda;
-  color: #fff;
-}
-html{
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
 html::-webkit-scrollbar{
   width: .8rem;
 }
@@ -36,6 +26,16 @@ html::-webkit-scrollbar-track{
 }
 html::-webkit-scrollbar-thumb{
   background: #420177;
+}
+
+body{
+  background: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+}
+
+*::selection{
+  background: #2b3dda;
+  color: #fff;
 }
 /* navbar starts */
 header{

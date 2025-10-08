@@ -4,19 +4,42 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://deepakpatidar.in/</loc>
-  <lastmod>2024-03-21T14:29:26+00:00</lastmod>
+  <lastmod>2025-10-08T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://deepakpatidar.in/experience/</loc>
-  <lastmod>2024-03-21T14:29:26+00:00</lastmod>
+  <lastmod>2025-10-08T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://deepakpatidar.in/projects/</loc>
+  <lastmod>2025-10-08T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://article.deepakpatidar.in/</loc>
+  <lastmod>2025-10-08T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://deepakpatidar.in/privacy-policy.html</loc>
+  <lastmod>2025-10-08T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://deepakpatidar.in/terms-of-service.html</loc>
+  <lastmod>2025-10-08T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
 
 </urlset>

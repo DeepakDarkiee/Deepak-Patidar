@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Terms of Service for Deepak Patidar's professional portfolio website"
+    />
+    <title>Terms of Service - Deepak Patidar</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./assets/css/style.css" as="style" />
+    <link rel="preload" href="./assets/js/script.js" as="script" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/images/site.webmanifest" />
+
+    <link
+      rel="canonical"
+      href="https://deepakpatidar.in/terms-of-service.html"
+    />
+
+    <style>
+      .terms-section {
+        background: linear-gradient(135deg, #f0f7ff 0%, #e5ecfb 100%);
+        min-height: 100vh;
+        padding: 120px 9% 5rem;
+      }
+
+      .terms-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 2rem;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+      }
+
+      .terms-header {
+        background: linear-gradient(135deg, #1a047e 0%, #2506ad 100%);
+        color: white;
+        text-align: center;
+        padding: 3rem 2rem;
+        position: relative;
+      }
+
+      .terms-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.1) 25%,
+          transparent 25%,
+          transparent 75%,
+          rgba(255, 255, 255, 0.1) 75%
+        );
+        background-size: 20px 20px;
+        opacity: 0.1;
+      }
+
+      .terms-header h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 1;
+      }
+
+      .terms-header .icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+      }
+
+      .terms-content {
+        padding: 3rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      .terms-content h2 {
+        color: #1a047e;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 2.5rem 0 1.5rem 0;
+        border-left: 4px solid #2506ad;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .terms-content h3 {
+        color: #2506ad;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 2rem 0 1rem 0;
+      }
+
+      .terms-content p {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+      }
+
+      .terms-content ul {
+        margin: 1.5rem 0;
+        padding-left: 2rem;
+      }
+
+      .terms-content li {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+        position: relative;
+      }
+
+      .terms-content li::before {
+        content: "\f0da";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #2506ad;
+        position: absolute;
+        left: -2rem;
+        top: 0;
+      }
+
+      .updated-date {
+        background: linear-gradient(135deg, #f8f9ff, #e5ecfb);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-left: 4px solid #1a047e;
+        font-weight: 600;
+        color: #1a047e;
+      }
+
+      .professional-highlight {
+        background: linear-gradient(135deg, #1a047e, #2506ad);
+        color: white;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        margin: 2rem 0;
+        text-align: center;
+      }
+
+      .professional-highlight h2 {
+        color: white;
+        border: none;
+        padding: 0;
+        margin-bottom: 1rem;
+      }
+
+      .professional-highlight ul {
+        text-align: left;
+        margin-top: 1rem;
+      }
+
+      .professional-highlight li::before {
+        color: #fff;
+      }
+
+      .back-button {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: linear-gradient(135deg, #1a047e, #2506ad);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(26, 4, 126, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(26, 4, 126, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .terms-section {
+          padding: 100px 5% 3rem;
+        }
+
+        .terms-content {
+          padding: 2rem;
+        }
+
+        .terms-header h1 {
+          font-size: 2.8rem;
+        }
+
+        .terms-content h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <header>
+      <a href="./index.html" class="logo"
+        ><i class="fas fa-code"></i> Deepak Patidar</a
+      >
+      <div id="menu" class="fas fa-bars"></div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="./index.html#home">Home</a></li>
+          <li><a href="./index.html#about">About</a></li>
+          <li><a href="./index.html#skills">Skills</a></li>
+          <li><a href="./index.html#articles">Articles</a></li>
+          <li><a href="./index.html#experience">Experience</a></li>
+          <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="terms-section">
+      <div class="terms-container">
+        <div class="terms-header">
+          <i class="fas fa-gavel icon"></i>
+          <h1>Terms of Service</h1>
+        </div>
+
+        <div class="terms-content">
+          <div class="updated-date">
+            <i class="fas fa-calendar-alt"></i>
+            <strong>Last updated:</strong> October 8, 2025
+          </div>
+
+          <h2><i class="fas fa-info-circle"></i> Introduction</h2>
+          <p>
+            Welcome to my portfolio website. These Terms of Service ("Terms")
+            govern your use of deepakpatidar.in (the "Website") operated by
+            Deepak Patidar ("I", "me", or "my"). By accessing this website, you
+            agree to these terms.
+          </p>
+
+          <h2><i class="fas fa-handshake"></i> Acceptance of Terms</h2>
+          <p>
+            By accessing and using this website, you accept and agree to be
+            bound by the terms and provision of this agreement. If you do not
+            agree to these terms, please do not use this website.
+          </p>
+
+          <h2><i class="fas fa-certificate"></i> Use License</h2>
+          <p>
+            Permission is granted to temporarily view the materials on this
+            website for personal, non-commercial transitory viewing only. This
+            is the grant of a license, not a transfer of title, and under this
+            license you may not:
+          </p>
+          <ul>
+            <li>modify or copy the materials</li>
+            <li>
+              use the materials for any commercial purpose or for any public
+              display
+            </li>
+            <li>
+              attempt to reverse engineer any software contained on the website
+            </li>
+            <li>
+              remove any copyright or other proprietary notations from the
+              materials
+            </li>
+          </ul>
+
+          <h2><i class="fas fa-exclamation-triangle"></i> Disclaimer</h2>
+          <p>
+            The materials on this website are provided on an 'as is' basis. I
+            make no warranties, expressed or implied, and hereby disclaim and
+            negate all other warranties including without limitation, implied
+            warranties or conditions of merchantability, fitness for a
+            particular purpose, or non-infringement of intellectual property or
+            other violation of rights.
+          </p>
+
+          <h2><i class="fas fa-ban"></i> Limitations</h2>
+          <p>
+            In no event shall Deepak Patidar or its suppliers be liable for any
+            damages (including, without limitation, damages for loss of data or
+            profit, or due to business interruption) arising out of the use or
+            inability to use the materials on this website.
+          </p>
+
+          <h2><i class="fas fa-check-circle"></i> Accuracy of Materials</h2>
+          <p>
+            The materials appearing on this website could include technical,
+            typographical, or photographic errors. I do not warrant that any of
+            the materials on its website are accurate, complete, or current. I
+            may make changes to the materials contained on its website at any
+            time without notice.
+          </p>
+
+          <div class="professional-highlight">
+            <h2><i class="fas fa-briefcase"></i> Professional Engagement</h2>
+            <p>
+              This website serves as a professional portfolio. I welcome
+              inquiries for:
+            </p>
+            <ul>
+              <li>Professional consultations and collaborations</li>
+              <li>Technical discussions and project inquiries</li>
+              <li>Speaking engagements and interviews</li>
+              <li>Open source contributions and code reviews</li>
+            </ul>
+            <p>
+              For business inquiries, please use the contact form or email me
+              directly at <strong>contact@deepakpatidar.in</strong>
+            </p>
+          </div>
+
+          <h2><i class="fas fa-copyright"></i> Intellectual Property</h2>
+          <p>
+            The content, design, and code on this website are my intellectual
+            property unless otherwise stated. Some code examples and projects
+            may be open source under specific licenses, which will be clearly
+            indicated.
+          </p>
+
+          <h2><i class="fas fa-edit"></i> Modifications</h2>
+          <p>
+            I may revise these Terms of Service at any time without notice. By
+            using this website, you are agreeing to be bound by the then current
+            version of these terms of service.
+          </p>
+        </div>
+      </div>
+
+      <button
+        class="back-button"
+        onclick="window.history.back()"
+        title="Go Back"
+      >
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </section>
+
+    <!-- footer section starts -->
+    <footer class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Deepak's Portfolio</h3>
+          <p>
+            Thank you for visiting my personal portfolio website. Connect with
+            me over socials.
+          </p>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="./index.html#home"
+            ><i class="fas fa-chevron-circle-right"></i> home</a
+          >
+          <a href="./index.html#about"
+            ><i class="fas fa-chevron-circle-right"></i> about</a
+          >
+          <a href="./index.html#skills"
+            ><i class="fas fa-chevron-circle-right"></i> skills</a
+          >
+          <a href="./index.html#articles"
+            ><i class="fas fa-chevron-circle-right"></i> articles</a
+          >
+          <a href="./index.html#experience"
+            ><i class="fas fa-chevron-circle-right"></i> experience</a
+          >
+          <a href="./index.html#contact"
+            ><i class="fas fa-chevron-circle-right"></i> contact</a
+          >
+        </div>
+        <div class="box">
+          <h3>contact info</h3>
+          <p><i class="fas fa-phone"></i>+91 XXX XXX XXXX</p>
+          <p><i class="fas fa-envelope"></i>contact@deepakpatidar.in</p>
+          <p><i class="fas fa-map-marked-alt"></i>Indore, India</p>
+          <div class="share">
+            <a
+              href="https://linkedin.com/in/deepakpatidar"
+              class="fab fa-linkedin"
+              aria-label="LinkedIn"
+              target="_blank"
+            ></a>
+            <a
+              href="https://github.com/DeepakDarkiee"
+              class="fab fa-github"
+              aria-label="GitHub"
+              target="_blank"
+            ></a>
+            <a
+              href="mailto:contact@deepakpatidar.in"
+              class="fas fa-envelope"
+              aria-label="Email"
+            ></a>
+          </div>
+        </div>
+      </div>
+      <h1 class="credit">
+        Designed with <i class="fa fa-heart pulse"></i> by
+        <a href="https://deepakpatidar.in"> Deepak Patidar</a>
+      </h1>
+      <div style="text-align: center; margin-top: 1rem">
+        <a href="./privacy-policy.html" style="color: #fff; margin: 0 1rem"
+          >Privacy Policy</a
+        >
+        <a href="./terms-of-service.html" style="color: #fff; margin: 0 1rem"
+          >Terms of Service</a
+        >
+      </div>
+    </footer>
+
+    <!-- scroll reveal anim -->
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+      // Initialize ScrollReveal
+      if (typeof ScrollReveal !== "undefined") {
+        ScrollReveal().reveal(".terms-container", {
+          origin: "bottom",
+          distance: "50px",
+          duration: 1000,
+          delay: 200,
+        });
+
+        ScrollReveal().reveal(".terms-content h2", {
+          origin: "left",
+          distance: "30px",
+          duration: 800,
+          interval: 200,
+        });
+
+        ScrollReveal().reveal(".terms-content p, .terms-content ul", {
+          origin: "bottom",
+          distance: "20px",
+          duration: 600,
+          interval: 100,
+        });
+      }
+    </script>
+  </body>
+</html>
