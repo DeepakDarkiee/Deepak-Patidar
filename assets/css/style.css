@@ -373,6 +373,7 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
+  padding: 2rem;
 }
 .home #particles-js {
   position: absolute;
@@ -601,22 +602,82 @@ header .navbar ul li a:hover {
 /* social icons end */
 
 /* hero media queries starts*/
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 3rem 2rem;
+    min-height: auto;
+    gap: 2rem;
+  }
+  .home .image img {
+    width: 45%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 2rem;
+  }
+  .home .content {
+    flex: 1 1 auto;
+    padding-top: 2rem;
+  }
+  .home .image {
+    flex: 1 1 auto;
+    margin-bottom: 2rem;
+  }
+  .home .image img {
+    width: 50%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .home .content h2 {
+    font-size: 3.5rem;
+  }
+  .home .content h2 span {
+    font-size: 3.5rem;
+  }
+  .home .content p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .home .content p span {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 450px) {
+  .home {
+    padding: 1rem;
+  }
   .home .btn {
     margin: 2rem 0;
+    padding: 1.4rem 2.5rem;
+  }
+  .home .btn span {
+    font-size: 1.5rem;
   }
   .socials {
     margin-top: 2rem;
   }
   .home .image img {
-    margin-top: -12rem;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .home .content h2 {
+    font-size: 3rem;
+  }
+  .home .content h2 span {
+    font-size: 3rem;
   }
   .home .content p {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
   }
   .home .content p span {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
 /* hero media queries ends*/
@@ -902,6 +963,8 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
+  padding: 5rem 0;
+  margin-bottom: 2rem;
 }
 .skills h2 {
   color: #fff;
@@ -978,39 +1041,62 @@ header .navbar ul li a:hover {
   word-wrap: break-word;
 }
 /* skills media queries starts*/
+@media screen and (max-width: 1200px) {
+  .skills .container .row {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .skills .container .row {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
+  .skills .container {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .skills {
+    padding: 3rem 0;
+    margin-bottom: 1rem;
+  }
+  .skills .container {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem auto;
+  }
   .skills .container .row {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
   .skills .container .bar {
     padding: 1.5rem 1rem;
-    min-height: 120px;
+    min-height: 110px;
+  }
+  .skills .container .bar .info img {
+    width: 42px;
+    height: 42px;
   }
   .skills .container .bar .info span {
     font-size: 1.2rem;
+    line-height: 1.3;
   }
 }
 
 @media screen and (max-width: 600px) {
   .skills .container {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     margin: 1rem auto;
-    width: 95%;
+    width: 98%;
   }
   .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
   .skills .container .bar {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.8rem;
     min-height: 100px;
     max-width: none;
   }
@@ -1018,25 +1104,54 @@ header .navbar ul li a:hover {
     gap: 0.8rem;
   }
   .skills .container .bar .info img {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
   .skills .container .bar .info span {
     font-size: 1.1rem;
+    line-height: 1.2;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .skills .container .row {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
   }
   .skills .container .bar {
-    padding: 1rem 0.5rem;
-    min-height: 90px;
+    padding: 1.2rem 0.6rem;
+    min-height: 95px;
+  }
+  .skills .container .bar .info img {
+    width: 36px;
+    height: 36px;
   }
   .skills .container .bar .info span {
     font-size: 1rem;
+    line-height: 1.1;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .skills .container {
+    padding: 1rem 0.5rem;
+  }
+  .skills .container .row {
+    gap: 0.6rem;
+  }
+  .skills .container .bar {
+    padding: 1rem 0.5rem;
+    min-height: 85px;
+  }
+  .skills .container .bar .info {
+    gap: 0.6rem;
+  }
+  .skills .container .bar .info img {
+    width: 32px;
+    height: 32px;
+  }
+  .skills .container .bar .info span {
+    font-size: 0.9rem;
   }
 }
 /* skills media queries ends*/
@@ -1691,24 +1806,86 @@ form .button-area {
   padding: 1rem 0;
 }
 .footer .box-container .box .share a {
-  height: 4rem;
-  width: 4rem;
-  padding: 1rem;
+  height: 4.4rem;
+  width: 4.4rem;
+  padding: 0;
   text-align: center;
-  border-radius: 5rem;
-  font-size: 1.7rem;
+  border-radius: 1.2rem;
+  font-size: 1.8rem;
   margin-right: 1rem;
-  transition: 0.2s;
-  background: rgb(230, 230, 230);
-  color: #02094b;
-  border: none;
+  display: inline-block;
+  line-height: 44px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+.footer .box-container .box .share a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.footer .box-container .box .share a:hover::before {
+  left: 100%;
+}
+
+.footer .box-container .box .share a:active,
+.footer .box-container .box .share a:focus,
 .footer .box-container .box .share a:hover {
-  background: transparent;
-  transform: scale(0.98);
-  border: 0.1rem solid rgb(180, 178, 178);
-  color: #ffae00;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+/* Footer Social Platform Specific Styles */
+.footer .box-container .box .share a.github {
+  background: linear-gradient(135deg, #333 0%, #24292e 100%);
+  color: #fff;
+}
+.footer .box-container .box .share a.github:hover {
+  background: linear-gradient(135deg, #24292e 0%, #000 100%);
+  box-shadow: 0 8px 25px rgba(36, 41, 46, 0.4);
+}
+
+.footer .box-container .box .share a.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
+  color: #fff;
+}
+.footer .box-container .box .share a.linkedin:hover {
+  background: linear-gradient(135deg, #005582 0%, #004066 100%);
+  box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+}
+
+.footer .box-container .box .share a.instagram {
+  background: linear-gradient(135deg, #e4405f 0%, #c13584 50%, #833ab4 100%);
+  color: #fff;
+}
+.footer .box-container .box .share a.instagram:hover {
+  background: linear-gradient(135deg, #c13584 0%, #833ab4 50%, #5b2c87 100%);
+  box-shadow: 0 8px 25px rgba(196, 53, 132, 0.4);
+}
+
+.footer .box-container .box .share a.medium {
+  background: linear-gradient(135deg, #000 0%, #333 100%);
+  color: #fff;
+}
+.footer .box-container .box .share a.medium:hover {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
 .footer .credit {
   padding: 1rem 0 0 0;
   text-align: center;
@@ -1745,7 +1922,11 @@ form .button-area {
     padding: 0.7rem;
   }
   .footer .box-container .box .share a {
-    padding: 1.2rem;
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.6rem;
+    margin-right: 0.8rem;
+    margin-bottom: 0.5rem;
   }
 }
 /* footer section ends */
@@ -1787,6 +1968,9 @@ form .button-area {
     background: #fff;
     padding: 5rem 0;
     min-height: auto;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .articles .heading {
@@ -1932,6 +2116,7 @@ form .button-area {
 @media (max-width: 768px) {
     .articles {
         padding: 4rem 0;
+        margin-top: 1rem;
     }
     
     .articles .heading {
