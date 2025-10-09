@@ -330,6 +330,7 @@ header .navbar ul li a:hover {
     text-align: left;
     align-items: flex-start;
     background-color: #0e0f31;
+    z-index: 999;
   }
   header .navbar ul {
     flex-flow: column;
@@ -373,7 +374,7 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  padding: 2rem;
+  padding: 8rem 2rem 2rem 2rem;
 }
 .home #particles-js {
   position: absolute;
@@ -394,10 +395,12 @@ header .navbar ul li a:hover {
   flex: 1 1 40rem;
   padding-top: 1rem;
   z-index: 1;
+  position: relative;
 }
 .home .image {
   flex: 1 1 40rem;
   z-index: 1;
+  position: relative;
 }
 .home .image img {
   width: 70%;
@@ -606,7 +609,7 @@ header .navbar ul li a:hover {
   .home {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 8rem 2rem 3rem 2rem;
     min-height: auto;
     gap: 2rem;
   }
@@ -618,11 +621,11 @@ header .navbar ul li a:hover {
 
 @media (max-width: 768px) {
   .home {
-    padding: 2rem;
+    padding: 8rem 2rem 2rem 2rem;
   }
   .home .content {
     flex: 1 1 auto;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   .home .image {
     flex: 1 1 auto;
@@ -650,7 +653,7 @@ header .navbar ul li a:hover {
 
 @media (max-width: 450px) {
   .home {
-    padding: 1rem;
+    padding: 8rem 1rem 1rem 1rem;
   }
   .home .btn {
     margin: 2rem 0;
@@ -665,6 +668,7 @@ header .navbar ul li a:hover {
   .home .image img {
     width: 60%;
     margin: 0 auto;
+    margin-top: 1rem;
   }
   .home .content h2 {
     font-size: 3rem;
@@ -678,6 +682,28 @@ header .navbar ul li a:hover {
   }
   .home .content p span {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .home {
+    padding: 7rem 0.5rem 1rem 0.5rem;
+  }
+  .home .image img {
+    width: 65%;
+    margin-top: 1.5rem;
+  }
+  .home .content h2 {
+    font-size: 2.5rem;
+  }
+  .home .content h2 span {
+    font-size: 2.5rem;
+  }
+  .home .content p {
+    font-size: 1.6rem;
+  }
+  .home .content p span {
+    font-size: 1.6rem;
   }
 }
 /* hero media queries ends*/
@@ -939,7 +965,7 @@ header .navbar ul li a:hover {
     margin: 0;
   }
   
-  .certifications-grid {
+  .about .certifications-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
@@ -2223,7 +2249,7 @@ form .button-area {
 
 .certifications-container .certifications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2.5rem;
     justify-items: center;
     align-items: center;
@@ -2322,6 +2348,10 @@ form .button-area {
     border-radius: 15px;
     max-width: 100%;
     max-height: 100%;
+    width: 150px !important;
+    height: 200px !important;
+    margin: 0 auto;
+    display: block;
 }
 
 /* Sequential delays for cascade effect */
@@ -2354,6 +2384,113 @@ form .button-area {
 .cert-tile:hover {
     animation: none; /* Stop floating on hover */
     transform: translateY(-15px) scale(1.08);
+}
+
+/* AWS Certifications Mobile Responsiveness */
+@media (max-width: 1200px) {
+  .certifications-container .certifications-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+  .cert-tile {
+    width: 200px;
+    min-height: 260px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aws-certifications-section {
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+  }
+  .certifications-container {
+    padding: 0 1rem;
+  }
+  .certifications-container h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .certifications-container .cert-description {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  .certifications-container .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  .cert-tile {
+    width: 100%;
+    max-width: 180px;
+    min-height: 220px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .cert-tile:hover {
+    transform: translateY(-8px) scale(1.03);
+  }
+  .cert-tile iframe {
+    width: 130px !important;
+    height: 180px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .aws-certifications-section {
+    padding: 2rem 0.5rem;
+  }
+  .certifications-container h3 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .certifications-container .cert-description {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .certifications-container .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  .cert-tile {
+    width: 100%;
+    max-width: 160px;
+    min-height: 200px;
+    padding: 12px;
+  }
+  .cert-tile:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  .cert-tile iframe {
+    width: 120px !important;
+    height: 160px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .certifications-container .certifications-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .cert-tile {
+    max-width: 140px;
+    min-height: 180px;
+    padding: 10px;
+  }
+  .certifications-container h3 {
+    font-size: 2rem;
+  }
+  .certifications-container .cert-description {
+    font-size: 1.2rem;
+  }
+  .cert-tile iframe {
+    width: 100px !important;
+    height: 140px !important;
+  }
 }
 
 /* Contact Information Section - Full Width */
