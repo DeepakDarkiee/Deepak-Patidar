@@ -44,6 +44,42 @@
         "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
     },
     {
+        "name": "LangGraph",
+        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+    },
+    {
+        "name": "HuggingFace",
+        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+    },
+    {
+        "name": "Pinecone",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "ChromaDB",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "FAISS",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "Vector Databases",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "Anthropic Claude",
+        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+    },
+    {
+        "name": "RAG Systems",
+        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+    },
+    {
+        "name": "Apache Spark",
+        "icon": "https://img.icons8.com/color/48/000000/spark.png"
+    },
+    {
         "name": "AWS Lambda",
         "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
     },

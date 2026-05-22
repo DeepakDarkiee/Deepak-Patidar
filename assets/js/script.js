@@ -378,12 +378,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Force show tiles immediately for debugging
-        tiles.forEach(tile => {
-            tile.style.background = '#ffffff';
-            tile.style.border = '2px solid #ff9800';
-        });
-        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
@@ -582,7 +576,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', function () {
-      const current = html.getAttribute('data-theme') || 'light';
+      const current = html.getAttribute('data-theme') || 'dark';
       applyTheme(current === 'dark' ? 'light' : 'dark');
     });
   }

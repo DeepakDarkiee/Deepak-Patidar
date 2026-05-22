@@ -13,27 +13,15 @@
 </url>
 <url>
   <loc>https://deepakpatidar.in/experience/</loc>
-  <lastmod>2026-05-22T12:00:00+00:00</lastmod>
+  <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://deepakpatidar.in/projects/</loc>
-  <lastmod>2026-05-22T12:00:00+00:00</lastmod>
+  <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://deepakpatidar.in/privacy-policy.html</loc>
-  <lastmod>2025-10-08T12:00:00+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.30</priority>
-</url>
-<url>
-  <loc>https://deepakpatidar.in/terms-of-service.html</loc>
-  <lastmod>2025-10-08T12:00:00+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.30</priority>
 </url>
 
 </urlset>

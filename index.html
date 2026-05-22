@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -115,8 +115,14 @@
       href="./assets/images/safari-pinned-tab.svg"
       color="#5bbad5"
     />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-TileColor" content="#ff8d28" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="IN-MP" />
+    <meta name="geo.placename" content="Indore" />
+    <meta name="geo.position" content="22.7196;75.8577" />
+    <meta name="ICBM" content="22.7196, 75.8577" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -128,10 +134,12 @@
         "image": "https://deepakpatidar.in/assets/images/deepakfull.png",
         "sameAs": [
           "https://github.com/DeepakDarkiee",
-          "https://linkedin.com/in/deepakpatidar",
+          "https://www.linkedin.com/in/deepak-patidar-darkiee/",
+          "https://medium.com/@deepak-patidar",
+          "https://www.instagram.com/deep_patidar.py/",
           "https://article.deepakpatidar.in"
         ],
-        "jobTitle": "Senior Python Developer & AI Engineer",
+        "jobTitle": "Staff Engineer",
         "worksFor": {
           "@type": "Organization",
           "name": "Nagarro"
@@ -169,6 +177,27 @@
         "author": {
           "@type": "Person",
           "name": "Deepak Patidar"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://deepakpatidar.in/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Deepak Patidar",
+          "alternateName": "DeepakDarkiee",
+          "jobTitle": "Staff Engineer",
+          "worksFor": { "@type": "Organization", "name": "Nagarro" },
+          "url": "https://deepakpatidar.in",
+          "image": "https://deepakpatidar.in/assets/images/deepakfull.png"
         }
       }
     </script>
@@ -194,7 +223,7 @@
         </button>
         <div id="menu" class="fas fa-bars"></div>
       </div>
-      <nav class="navbar">
+      <nav class="navbar" aria-label="Main navigation">
         <ul>
           <li><a class="active" href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -230,8 +259,7 @@
                 class="linkedin"
                 aria-label="LinkedIn"
                 href="https://www.linkedin.com/in/deepak-patidar-darkiee/"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i
               ></a>
             </li>
             <li>
@@ -239,8 +267,7 @@
                 class="github"
                 aria-label="GitHub"
                 href="https://github.com/DeepakDarkiee"
-                target="_blank"
-                ><i class="fab fa-github"></i
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i
               ></a>
             </li>
             <li>
@@ -248,8 +275,7 @@
                 class="instagram"
                 aria-label="Instagram"
                 href="https://www.instagram.com/deep_patidar.py/"
-                target="_blank"
-                ><i class="fab fa-instagram"></i
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i
               ></a>
             </li>
             <li>
@@ -257,8 +283,7 @@
                 class="medium"
                 aria-label="Medium"
                 href="https://medium.com/@deepak-patidar"
-                target="_blank"
-                ><i class="fab fa-medium"></i
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i
               ></a>
             </li>
           </ul>
@@ -284,8 +309,11 @@
           draggable="false"
           class="tilt"
           src="./assets/images/profile-pic.png"
-          alt="Deepak Patidar"
-          loading="lazy"
+          alt="Deepak Patidar - Senior Python Developer & AI Engineer"
+          loading="eager"
+          fetchpriority="high"
+          width="400"
+          height="400"
         />
       </div>
     </section>
@@ -361,6 +389,7 @@
             <a
               href="https://drive.google.com/file/d/1WkriGsvGJ83TdWaEvfdJqia6wk76Bpvw/view"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn"
               ><span>Download Resume</span>
               <i class="fas fa-download"></i>
@@ -509,6 +538,7 @@
               <a
                 href="https://article.deepakpatidar.in/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="medium-btn"
               >
                 <span>Read My Articles</span>
@@ -532,7 +562,7 @@
               <h2>Nagarro</h2>
             </div>
             <div class="desc">
-              <h3>Senior Python Developer & AI Engineer</h3>
+              <h3>Staff Engineer</h3>
               <p>Dec 2023 - Present</p>
             </div>
           </div>
@@ -700,8 +730,7 @@
                 class="linkedin"
                 aria-label="LinkedIn"
                 href="https://www.linkedin.com/in/deepak-patidar-darkiee/"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i
               ></a>
             </li>
             <li>
@@ -709,8 +738,7 @@
                 class="github"
                 aria-label="GitHub"
                 href="https://github.com/DeepakDarkiee"
-                target="_blank"
-                ><i class="fab fa-github"></i
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i
               ></a>
             </li>
             <li>
@@ -718,8 +746,7 @@
                 class="instagram"
                 aria-label="Instagram"
                 href="https://www.instagram.com/deep_patidar.py/"
-                target="_blank"
-                ><i class="fab fa-instagram"></i
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i
               ></a>
             </li>
             <li>
@@ -727,8 +754,7 @@
                 class="medium"
                 aria-label="Medium"
                 href="https://medium.com/@deepak-patidar"
-                target="_blank"
-                ><i class="fab fa-medium"></i
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i
               ></a>
             </li>
           </ul>
@@ -737,7 +763,7 @@
 
       <p class="credit">
         Designed with <i class="fa fa-heart pulse"></i> by
-        <a href="https://www.linkedin.com/in/deepak-patidar-darkiee/">
+        <a href="https://www.linkedin.com/in/deepak-patidar-darkiee/" target="_blank" rel="noopener noreferrer">
           Deepak Patidar</a
         >
       </p>

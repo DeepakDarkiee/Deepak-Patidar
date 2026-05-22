@@ -454,8 +454,8 @@ header .navbar ul li a:hover{
   right: 2rem;
   padding: 1rem 1.5rem;
   font-size: 2rem;
-  background: #ffae00;
-  color: rgb(13, 0, 44);
+  background: linear-gradient(135deg, #ff8d28 0%, #8b5cf6 100%);
+  color: #ffffff;
   border-radius: 5rem;
   transition: 1s linear;
   z-index: 1000;
@@ -465,33 +465,47 @@ header .navbar ul li a:hover{
 }
 /* scroll top ends */
 
-/* ── Design Tokens + Dark Mode ── */
+/* ── Darkiee Brand Tokens (dark default) ── */
 :root {
-  --c-bg: #f7f7f7; --c-surface: #ffffff; --c-surface-alt: #f0f2f8;
-  --c-text: #0e2431; --c-muted: #5a6c7d;
-  --c-accent: #4f46e5; --c-accent-glow: rgba(79,70,229,0.12);
-  --c-border: #e2e8f0;
-  --c-shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-  --c-shadow-md: 0 6px 24px rgba(0,0,0,0.09);
-  --c-nav: rgba(255,255,255,0.92);
-  --c-footer-bg: #06061a;
+  --brand-orange:        #f77f03;
+  --brand-orange-light:  #ff8d28;
+  --brand-purple:        #8b5cf6;
+  --brand-purple-deep:   #6d28d9;
+  --c-bg:           #0f172a;
+  --c-surface:      #1e293b;
+  --c-text:         #f1f5f9;
+  --c-muted:        #94a3b8;
+  --c-accent:       #ff8d28;
+  --c-accent-glow:  rgba(247,127,3,0.15);
+  --c-border:        rgba(255,255,255,0.10);
+  --c-border-strong: rgba(255,255,255,0.20);
+  --c-shadow-sm:    0 2px 8px rgba(0,0,0,0.35);
+  --c-shadow-md:    0 8px 24px rgba(0,0,0,0.45);
+  --c-nav:          rgba(15,23,42,0.95);
+  --c-footer-bg:    #060d1a;
+  --g-brand:        linear-gradient(90deg,  #ff8d28 0%, #8b5cf6 100%);
+  --g-brand-diag:   linear-gradient(135deg, #ff8d28 0%, #8b5cf6 100%);
 }
-[data-theme="dark"] {
-  --c-bg: #0d0d1a; --c-surface: #13131f; --c-surface-alt: #1a1a2e;
-  --c-text: #e2e8f0; --c-muted: #94a3b8;
-  --c-accent: #818cf8; --c-accent-glow: rgba(129,140,248,0.14);
-  --c-border: #2a2a42;
-  --c-shadow-sm: 0 2px 8px rgba(0,0,0,0.35);
-  --c-shadow-md: 0 6px 24px rgba(0,0,0,0.5);
-  --c-nav: rgba(13,13,26,0.95);
-  --c-footer-bg: #06060f;
+[data-theme="light"] {
+  --c-bg:           #f8fafc;
+  --c-surface:      #ffffff;
+  --c-text:         #0f172a;
+  --c-muted:        #475569;
+  --c-accent:       #c96200;
+  --c-accent-glow:  rgba(201,98,0,0.12);
+  --c-border:        #e2e8f0;
+  --c-border-strong: #cbd5e1;
+  --c-shadow-sm:    0 2px 8px rgba(0,0,0,0.06);
+  --c-shadow-md:    0 8px 24px rgba(0,0,0,0.09);
+  --c-nav:          rgba(248,250,252,0.95);
+  --c-footer-bg:    #06061a;
 }
 
-body { background: var(--c-bg); color: var(--c-text); }
+body { background: var(--c-bg); color: var(--c-text); transition: background 0.3s ease, color 0.3s ease; }
 
 #scroll-progress {
   position: fixed; top: 0; left: 0; height: 3px; width: 0%;
-  background: linear-gradient(90deg, var(--c-accent), #a855f7, #ec4899);
+  background: var(--g-brand);
   z-index: 9999; border-radius: 0 2px 2px 0; pointer-events: none;
 }
 
@@ -499,10 +513,11 @@ header {
   background: var(--c-nav);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--c-border);
-  transition: box-shadow 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 header.scrolled { box-shadow: var(--c-shadow-sm); }
 header .logo { color: var(--c-text); }
+header .logo i { color: var(--brand-orange-light); }
 header .logo:hover { color: var(--c-accent); }
 header .navbar ul li a { color: var(--c-text); }
 header .navbar ul li a.active,
@@ -523,7 +538,7 @@ header .navbar ul li a:hover { color: var(--c-accent); border-bottom-color: var(
   color: var(--c-accent); transform: rotate(20deg) scale(1.05);
 }
 
-/* Experience timeline dark mode */
+/* Experience timeline */
 .experience { background: var(--c-bg); }
 .experience .heading { color: var(--c-text); }
 .experience .timeline::after { background: var(--c-border); width: 2px; }
@@ -540,12 +555,13 @@ header .navbar ul li a:hover { color: var(--c-accent); border-bottom-color: var(
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 .experience .content:hover {
-  box-shadow: var(--c-shadow-md); transform: translateY(-4px); border-color: var(--c-accent);
+  box-shadow: var(--c-shadow-md); transform: translateY(-4px);
+  border-color: rgba(255,141,40,0.5);
 }
-.experience .content .tag { background: var(--c-accent); }
-.experience .content .tag h2 { color: #fff; font-size: 1.5rem; font-weight: 600; }
+.experience .content .tag { background: var(--g-brand-diag); padding: 1.1rem 1.8rem; }
+.experience .content .tag h2 { color: #fff; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.02em; }
 .experience .content .desc { padding: 1.2rem 1.8rem 1.6rem; margin-left: 0; }
-.experience .content .desc h3 { color: var(--c-text); }
+.experience .content .desc h3 { color: var(--c-text); font-size: 1.45rem; font-weight: 600; }
 .experience .content .desc p {
   color: var(--c-accent); font-size: 1.15rem; font-weight: 500; margin-top: 0.5rem;
   display: flex; align-items: center; gap: 0.6rem; text-transform: none;
@@ -555,11 +571,31 @@ header .navbar ul li a:hover { color: var(--c-accent); border-bottom-color: var(
   min-width: 6px; background: var(--c-accent); border-radius: 50%;
 }
 
-/* Footer dark mode */
+/* Footer */
 .footer { background: var(--c-footer-bg); }
 .footer .box-container .box h3 { color: #fff; }
 .footer .box-container .box p { color: #ccc; }
 .footer .box-container .box a { color: #eee; }
-.footer .box-container .box a:hover { color: #ffae00; }
+.footer .box-container .box a:hover { color: var(--brand-orange-light); }
+.footer .box-container .box p i { color: var(--c-accent); }
+.footer .box-container .box .share a:hover { color: var(--c-accent); }
+.footer .credit a { color: var(--c-accent); }
 
-[data-theme="dark"] header .navbar { background-color: #0a0a18; }
+/* Scroll-top brand button */
+#scroll-top {
+  background: linear-gradient(135deg, #ff8d28 0%, #8b5cf6 100%);
+  color: #ffffff;
+}
+
+/* Light-mode mobile nav text */
+@media (max-width: 768px) {
+  [data-theme="light"] header .navbar ul li a { color: var(--c-text); }
+}
+
+/* Mobile navbar */
+header .navbar { background-color: #0a1020; }
+[data-theme="light"] header .navbar { background-color: #f8fafc; }
+header .navbar ul li a.active,
+header .navbar ul li a:hover { background-color: rgba(255,141,40,0.08); }
+[data-theme="light"] header .navbar ul li a.active,
+[data-theme="light"] header .navbar ul li a:hover { background-color: rgba(201,98,0,0.08); }
