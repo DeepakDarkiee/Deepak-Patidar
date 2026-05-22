@@ -1,15 +1,32 @@
 /* ============================================================
-   DARK MODE — restores saved preference on load
-   (onclick on the button handles clicks without needing this to run first)
+   DARK MODE — restores saved preference on load + registers click listener
    ============================================================ */
 (function () {
   var h = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
   var icon = document.getElementById('theme-icon');
   var KEY = 'dp-theme';
+
+  function applyTheme(t) {
+    h.setAttribute('data-theme', t);
+    if (icon) icon.className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    try { localStorage.setItem(KEY, t); } catch (e) {}
+  }
+
   var saved = localStorage.getItem(KEY);
-  var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'dark');
-  h.setAttribute('data-theme', theme);
-  if (icon) icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  if (saved) {
+    applyTheme(saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    applyTheme('light');
+  } else {
+    applyTheme('dark');
+  }
+
+  if (btn) {
+    btn.addEventListener('click', function () {
+      applyTheme(h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
 })();
 
 /* ============================================================
