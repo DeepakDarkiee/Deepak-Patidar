@@ -1,3 +1,40 @@
+/* ============================================================
+   DARK MODE TOGGLE — runs first, before jQuery, Rocket-Loader-safe
+   ============================================================ */
+(function () {
+  var html        = document.documentElement;
+  var toggleBtn   = document.getElementById('theme-toggle');
+  var themeIcon   = document.getElementById('theme-icon');
+  var STORAGE_KEY = 'dp-theme';
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    if (themeIcon) {
+      themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+    localStorage.setItem(STORAGE_KEY, theme);
+  }
+
+  var saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    applyTheme(saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      var current = html.getAttribute('data-theme') || 'dark';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  }
+})();
+
+/* Guard: if jQuery hasn't loaded (Rocket Loader race), skip jQuery-dependent code */
+if (typeof $ === 'undefined' || typeof $.fn === 'undefined') {
+  console.warn('jQuery not available — interactive features deferred.');
+} else {
+
 $(document).ready(function () {
 
     $('#menu').click(function () {
@@ -55,7 +92,9 @@ $(document).ready(function () {
     });
     // <!-- emailjs to mail contact form data -->
 
-});
+}); // end $(document).ready
+
+} // end jQuery guard
 
 document.addEventListener('visibilitychange',
     function () {
@@ -548,39 +587,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* Smooth scroll is handled by jQuery above and native CSS scroll-behavior */
-
-/* ============================================================
-   DARK MODE TOGGLE
-   ============================================================ */
-(function () {
-  const html        = document.documentElement;
-  const toggleBtn   = document.getElementById('theme-toggle');
-  const themeIcon   = document.getElementById('theme-icon');
-  const STORAGE_KEY = 'dp-theme';
-
-  function applyTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    if (themeIcon) {
-      themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-    }
-    localStorage.setItem(STORAGE_KEY, theme);
-  }
-
-  // Restore saved preference (or respect OS preference)
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved) {
-    applyTheme(saved);
-  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    applyTheme('dark');
-  }
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', function () {
-      const current = html.getAttribute('data-theme') || 'dark';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  }
-})();
 
 /* ============================================================
    SCROLL PROGRESS BAR
