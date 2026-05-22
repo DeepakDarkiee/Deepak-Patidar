@@ -49,15 +49,25 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  outline: none;
   border: none;
   text-transform: capitalize;
-  transition: all 0.2s linear;
 }
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #421cec;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 html::-webkit-scrollbar {
   width: 0.8rem;
@@ -100,11 +110,7 @@ body {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Smooth scroll behavior improvements */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 70px; /* Account for fixed header */
-}
+/* scroll-behavior and scroll-padding-top are set in the html reset above */
 
 /* Enhanced section transitions */
 section {
@@ -1830,6 +1836,7 @@ form .button-area {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 0;
+  list-style: none;
 }
 .footer .box-container .box .share a {
   height: 4.4rem;

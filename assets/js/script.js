@@ -553,20 +553,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-/* ===== ADDITIONAL SMOOTH SCROLL ENHANCEMENTS ===== */
-// Add smooth scrolling behavior for all anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+/* Smooth scroll is handled by jQuery above and native CSS scroll-behavior */
 
 // Intersection Observer for enhanced scroll animations
 const observerOptions = {
