@@ -96,7 +96,7 @@
         <a href="/" class="logo"><i class="fas fa-code"></i> Deepak Patidar</a>
 
         <div class="nav-right">
-          <button id="theme-toggle" aria-label="Toggle dark mode">
+          <button id="theme-toggle" aria-label="Toggle dark mode" onclick="(function(){var h=document.documentElement,k='dp-theme',t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);var i=document.getElementById('theme-icon');if(i)i.className=t==='dark'?'fas fa-sun':'fas fa-moon';try{localStorage.setItem(k,t)}catch(e){}})()">
             <i class="fas fa-moon" id="theme-icon"></i>
           </button>
           <div id="menu" class="fas fa-bars"></div>

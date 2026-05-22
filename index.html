@@ -218,7 +218,7 @@
       <a href="/" class="logo"><i class="fas fa-code"></i> Deepak Patidar</a>
 
       <div class="nav-right">
-        <button id="theme-toggle" aria-label="Toggle dark mode">
+        <button id="theme-toggle" aria-label="Toggle dark mode" onclick="(function(){var h=document.documentElement,k='dp-theme',t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);var i=document.getElementById('theme-icon');if(i)i.className=t==='dark'?'fas fa-sun':'fas fa-moon';try{localStorage.setItem(k,t)}catch(e){}})()">
           <i class="fas fa-moon" id="theme-icon"></i>
         </button>
         <div id="menu" class="fas fa-bars"></div>
@@ -804,15 +804,6 @@
     <!-- scroll back to top -->
 
     <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-    <!-- jquery cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-      defer
-    ></script>
-
     <!-- typed.js cdn -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
@@ -846,29 +837,6 @@
 
     <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
-    <script src="./assets/js/script.js" defer data-cfasync="false"></script>
-
-    <!-- Inline dark-mode bootstrap: data-cfasync="false" opts out of Cloudflare Rocket Loader -->
-    <script data-cfasync="false">
-    (function(){
-      var html=document.documentElement;
-      var KEY='dp-theme';
-      function applyTheme(t){
-        html.setAttribute('data-theme',t);
-        var icon=document.getElementById('theme-icon');
-        if(icon) icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';
-        localStorage.setItem(KEY,t);
-      }
-      // Restore preference
-      var saved=localStorage.getItem(KEY);
-      if(saved) applyTheme(saved);
-      else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches) applyTheme('dark');
-      // Attach toggle listener (DOM is ready — this script is at the bottom of body)
-      var btn=document.getElementById('theme-toggle');
-      if(btn) btn.addEventListener('click',function(){
-        applyTheme(html.getAttribute('data-theme')==='dark'?'light':'dark');
-      });
-    })();
-    </script>
+    <script src="./assets/js/script.js" defer></script>
   </body>
 </html>
