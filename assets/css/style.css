@@ -2617,3 +2617,419 @@ form .button-area {
         gap: 15px;
     }
 }
+
+
+/* ============================================================
+   MODERN MINIMAL DESIGN SYSTEM + DARK MODE
+   ============================================================ */
+
+/* ── 1. Design Tokens ─────────────────────────────────────── */
+:root {
+  --c-bg:           #f7f7f7;
+  --c-surface:      #ffffff;
+  --c-surface-alt:  #f0f2f8;
+  --c-text:         #0e2431;
+  --c-muted:        #5a6c7d;
+  --c-accent:       #4f46e5;
+  --c-accent-glow:  rgba(79, 70, 229, 0.12);
+  --c-border:       #e2e8f0;
+  --c-shadow-sm:    0 2px 8px rgba(0,0,0,0.06);
+  --c-shadow-md:    0 6px 24px rgba(0,0,0,0.09);
+  --c-shadow-lg:    0 12px 48px rgba(0,0,0,0.13);
+  --c-nav:          rgba(255,255,255,0.92);
+  --c-skills-bg:    linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --c-footer-bg:    #06061a;
+}
+
+[data-theme="dark"] {
+  --c-bg:           #0d0d1a;
+  --c-surface:      #13131f;
+  --c-surface-alt:  #1a1a2e;
+  --c-text:         #e2e8f0;
+  --c-muted:        #94a3b8;
+  --c-accent:       #818cf8;
+  --c-accent-glow:  rgba(129, 140, 248, 0.14);
+  --c-border:       #2a2a42;
+  --c-shadow-sm:    0 2px 8px rgba(0,0,0,0.35);
+  --c-shadow-md:    0 6px 24px rgba(0,0,0,0.5);
+  --c-shadow-lg:    0 12px 48px rgba(0,0,0,0.65);
+  --c-nav:          rgba(13,13,26,0.95);
+  --c-skills-bg:    linear-gradient(135deg, #1e1b4b 0%, #2d1f5e 100%);
+  --c-footer-bg:    #06060f;
+}
+
+/* ── 2. Base ──────────────────────────────────────────────── */
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+
+html::-webkit-scrollbar-track { background: var(--c-bg); }
+html::-webkit-scrollbar-thumb {
+  background: var(--c-accent);
+  border-radius: 4px;
+}
+
+/* ── 3. Scroll Progress Bar ───────────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--c-accent), #a855f7, #ec4899);
+  z-index: 9999;
+  border-radius: 0 2px 2px 0;
+  transition: width 0.08s linear;
+  pointer-events: none;
+}
+
+/* ── 4. Navbar ────────────────────────────────────────────── */
+header {
+  background: var(--c-nav);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--c-border);
+  box-shadow: none;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  /* make room for the nav-right group */
+  gap: 1.5rem;
+}
+
+header.scrolled {
+  box-shadow: var(--c-shadow-sm);
+}
+
+header .logo     { color: var(--c-text); }
+header .logo:hover { color: var(--c-accent); }
+
+header .navbar ul li a { color: var(--c-text); }
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  color: var(--c-accent);
+  border-bottom-color: var(--c-accent);
+}
+
+/* Group: toggle + hamburger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* on desktop the navbar is visible, so nav-right sits between logo and nav */
+}
+
+/* Override the original margin-left: auto on #menu — nav-right handles layout */
+#menu {
+  color: var(--c-text);
+  margin-left: 0;
+}
+
+/* ── 5. Dark-Mode Toggle ──────────────────────────────────── */
+#theme-toggle {
+  background: transparent;
+  border: 1.5px solid var(--c-border);
+  border-radius: 50%;
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--c-text);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: var(--c-accent-glow);
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+  transform: rotate(20deg) scale(1.05);
+}
+
+/* Mobile: keep toggle visible beside hamburger */
+@media (max-width: 768px) {
+  .nav-right { display: flex; }
+
+  #theme-toggle {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* ── 6. Hero Section ──────────────────────────────────────── */
+.home { background: var(--c-bg); }
+.home .content h2 { color: var(--c-text); }
+.home .content p  { color: var(--c-text); }
+
+/* Stats row */
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--c-border);
+  flex-wrap: wrap;
+}
+
+.hero-stats .stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hero-stats .stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--c-accent);
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+  text-transform: none;
+}
+
+.hero-stats .stat-label {
+  font-size: 1.2rem;
+  color: var(--c-muted);
+  text-transform: none;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .hero-stats { gap: 2rem; }
+  .hero-stats .stat-number { font-size: 2.4rem; }
+  .hero-stats .stat-label  { font-size: 1.1rem; }
+}
+
+@media (max-width: 450px) {
+  .hero-stats { gap: 1.5rem; padding-top: 2rem; }
+  .hero-stats .stat-number { font-size: 2rem; }
+}
+
+/* ── 7. About Section ─────────────────────────────────────── */
+.about { background: var(--c-surface); }
+.about .heading        { color: var(--c-text); }
+.about .row .content h3   { color: var(--c-text); }
+.about .row .content .tag { color: var(--c-accent); }
+.about .row .content p    { color: var(--c-muted); }
+
+.highlight-item {
+  background: var(--c-surface-alt);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--c-shadow-sm);
+}
+
+.highlight-item:hover {
+  border-color: var(--c-accent);
+  box-shadow: var(--c-shadow-md);
+}
+
+.highlight-item i  { color: var(--c-accent); }
+.highlight-item h4 { color: var(--c-text); }
+.highlight-item p  { color: var(--c-muted); }
+
+/* About contact-info cards (inside the blue strip) are white-on-blue — leave untouched */
+
+/* ── 8. Skills Section ────────────────────────────────────── */
+.skills { background: var(--c-skills-bg); }
+
+.skills .container {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.skills .container .bar {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 1.2rem;
+  backdrop-filter: blur(4px);
+  box-shadow: none !important;
+}
+
+.skills .container .bar:hover {
+  background: rgba(255,255,255,0.16) !important;
+  border-color: rgba(255,255,255,0.35) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+}
+
+/* ── 9. Articles Section ──────────────────────────────────── */
+.articles {
+  background: var(--c-bg);
+  margin-top: 0;
+}
+
+.articles .heading    { color: var(--c-text); }
+.articles-description { color: var(--c-muted); }
+
+.medium-cta {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--c-shadow-sm);
+}
+
+.medium-cta:hover { box-shadow: var(--c-shadow-md); }
+
+.medium-content h3 { color: var(--c-text); }
+.medium-content p  { color: var(--c-muted); }
+
+/* ── 10. Experience Timeline — Full Redesign ──────────────── */
+.experience { background: var(--c-bg); }
+.experience .heading { color: var(--c-text); }
+
+/* Timeline vertical line */
+.experience .timeline::after {
+  background: var(--c-border);
+  width: 2px;
+}
+
+/* Timeline node circle */
+.experience .container::after {
+  background-color: var(--c-surface);
+  border: 3px solid var(--c-accent);
+  color: var(--c-accent);
+  font-size: 1.2rem;
+  width: 34px;
+  height: 34px;
+  line-height: 28px;
+  right: -18px;
+  box-shadow: 0 0 0 6px var(--c-accent-glow);
+}
+
+.experience .right::after {
+  left: -18px;
+}
+
+/* Remove the old orange arrow pointers */
+.experience .container::before { display: none !important; }
+
+/* Cards */
+.experience .content {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 1.2rem;
+  box-shadow: var(--c-shadow-sm);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experience .content:hover {
+  box-shadow: var(--c-shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--c-accent);
+}
+
+/* Company name tag — coloured header strip */
+.experience .content .tag {
+  background: var(--c-accent);
+  padding: 1.1rem 1.8rem;
+  font-size: 1.3rem;
+}
+
+.experience .content .tag h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Role + date */
+.experience .content .desc {
+  padding: 1.2rem 1.8rem 1.6rem;
+  margin-left: 0;
+}
+
+.experience .content .desc h3 {
+  color: var(--c-text);
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.experience .content .desc p {
+  color: var(--c-accent);
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: none;
+}
+
+.experience .content .desc p::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  background: var(--c-accent);
+  border-radius: 50%;
+}
+
+/* ── 11. Contact Section ──────────────────────────────────── */
+.contact { background: var(--c-surface-alt); }
+
+.contact .container {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--c-shadow-sm);
+}
+
+.contact-glass {
+  background: var(--c-surface) !important;
+  border: 1px solid var(--c-border) !important;
+  box-shadow: var(--c-shadow-sm) !important;
+  backdrop-filter: none !important;
+}
+
+.contact .content form,
+.contact-glass form {
+  background: var(--c-surface-alt) !important;
+  border: 1px solid var(--c-border) !important;
+  box-shadow: none !important;
+}
+
+.form-group .field input,
+.form-group .message textarea,
+form .field input,
+form .message textarea {
+  background: var(--c-surface) !important;
+  border: 1.5px solid var(--c-border) !important;
+  color: var(--c-text) !important;
+}
+
+.field input::placeholder,
+.message textarea::placeholder {
+  color: var(--c-muted);
+}
+
+.form-group .field input:focus,
+.form-group .message textarea:focus,
+.field input:focus,
+.message textarea:focus {
+  border-color: var(--c-accent) !important;
+  box-shadow: 0 0 0 3px var(--c-accent-glow) !important;
+}
+
+form i { color: var(--c-muted); }
+
+.field input:focus ~ i,
+.message textarea:focus ~ i { color: var(--c-accent); }
+
+/* ── 12. Footer ───────────────────────────────────────────── */
+.footer { background: var(--c-footer-bg); }
+
+/* ── 13. Dark-mode mobile navbar ─────────────────────────── */
+[data-theme="dark"] header .navbar {
+  background-color: #0a0a18;
+}
+
+[data-theme="dark"] header .navbar ul li a.active,
+[data-theme="dark"] header .navbar ul li a:hover {
+  background-color: rgba(129, 140, 248, 0.15);
+  color: var(--c-accent);
+}

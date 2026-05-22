@@ -72,7 +72,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["AI & Machine Learning", "Python Backend Development", "AWS Cloud Solutions", "Data Engineering", "MLOps & DevOps", "API Development"],
+    strings: ["Agentic AI Systems", "LLM Engineering", "Python Backend Development", "AWS Cloud Solutions", "Data Engineering", "MLOps & DevOps"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -554,6 +554,70 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* Smooth scroll is handled by jQuery above and native CSS scroll-behavior */
+
+/* ============================================================
+   DARK MODE TOGGLE
+   ============================================================ */
+(function () {
+  const html        = document.documentElement;
+  const toggleBtn   = document.getElementById('theme-toggle');
+  const themeIcon   = document.getElementById('theme-icon');
+  const STORAGE_KEY = 'dp-theme';
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    if (themeIcon) {
+      themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+    localStorage.setItem(STORAGE_KEY, theme);
+  }
+
+  // Restore saved preference (or respect OS preference)
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    applyTheme(saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      const current = html.getAttribute('data-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  }
+})();
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+(function () {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+
+  window.addEventListener('scroll', function () {
+    const scrolled   = window.pageYOffset;
+    const maxScroll  = document.body.scrollHeight - window.innerHeight;
+    const pct        = maxScroll > 0 ? (scrolled / maxScroll) * 100 : 0;
+    bar.style.width  = pct + '%';
+  }, { passive: true });
+})();
+
+/* ============================================================
+   NAVBAR GLASSMORPHISM ON SCROLL
+   ============================================================ */
+(function () {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+})();
 
 // Intersection Observer for enhanced scroll animations
 const observerOptions = {

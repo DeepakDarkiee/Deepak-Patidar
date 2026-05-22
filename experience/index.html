@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,11 +27,18 @@
 </head>
 <body>
 
+<div id="scroll-progress"></div>
+
 <!-- navbar starts -->
 <header>
         <a href="/" class="logo"><i class="fas fa-code"></i> Deepak Patidar</a>
 
-        <div id="menu" class="fas fa-bars"></div>
+        <div class="nav-right">
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+          </button>
+          <div id="menu" class="fas fa-bars"></div>
+        </div>
         <nav class="navbar">
             <ul>
             <li><a href="/#home">Home</a></li>
@@ -168,6 +175,20 @@
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./script.js"></script>
+<script>
+/* Dark mode + scroll progress for experience page */
+(function(){
+  var html=document.documentElement,btn=document.getElementById('theme-toggle'),icon=document.getElementById('theme-icon'),KEY='dp-theme';
+  function apply(t){html.setAttribute('data-theme',t);if(icon)icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';localStorage.setItem(KEY,t);}
+  var saved=localStorage.getItem(KEY);
+  if(saved)apply(saved);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)apply('dark');
+  if(btn)btn.addEventListener('click',function(){apply(html.getAttribute('data-theme')==='dark'?'light':'dark');});
+  var bar=document.getElementById('scroll-progress');
+  if(bar)window.addEventListener('scroll',function(){var s=window.pageYOffset,m=document.body.scrollHeight-window.innerHeight;bar.style.width=(m>0?(s/m)*100:0)+'%';},{passive:true});
+  var header=document.querySelector('header');
+  if(header)window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
+})();
+</script>
 
 </body>
 </html>

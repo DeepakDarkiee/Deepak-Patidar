@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -181,11 +181,19 @@
   <img draggable="false" src="./assets/images/preloader.gif" alt="">
 </div> -->
 
+    <!-- scroll progress bar -->
+    <div id="scroll-progress"></div>
+
     <!-- navbar starts -->
     <header>
       <a href="/" class="logo"><i class="fas fa-code"></i> Deepak Patidar</a>
 
-      <div id="menu" class="fas fa-bars"></div>
+      <div class="nav-right">
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <div id="menu" class="fas fa-bars"></div>
+      </div>
       <nav class="navbar">
         <ul>
           <li><a class="active" href="#home">Home</a></li>
@@ -254,6 +262,21 @@
               ></a>
             </li>
           </ul>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">6</span>
+            <span class="stat-label">AWS Certifications</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50%+</span>
+            <span class="stat-label">AI Systems to Production</span>
+          </div>
         </div>
       </div>
       <div class="image">
