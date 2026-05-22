@@ -846,10 +846,10 @@
 
     <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
-    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/script.js" defer data-cfasync="false"></script>
 
-    <!-- Inline dark-mode bootstrap: runs immediately, never touched by Cloudflare Rocket Loader -->
-    <script>
+    <!-- Inline dark-mode bootstrap: data-cfasync="false" opts out of Cloudflare Rocket Loader -->
+    <script data-cfasync="false">
     (function(){
       var html=document.documentElement;
       var KEY='dp-theme';
