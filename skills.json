@@ -1,4 +1,4 @@
-[    
+[
     {
         "name": "Python",
         "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
@@ -12,8 +12,88 @@
         "icon": "https://img.icons8.com/color/48/000000/api.png"
     },
     {
-        "name": "Machine Learning",
+        "name": "Flask",
+        "icon": "https://img.icons8.com/ios-filled/50/000000/flask.png"
+    },
+    {
+        "name": "LangChain",
+        "icon": "https://img.icons8.com/color/48/000000/chain.png"
+    },
+    {
+        "name": "LangGraph",
+        "icon": "https://img.icons8.com/color/48/000000/workflow.png"
+    },
+    {
+        "name": "LangFuse",
+        "icon": "https://img.icons8.com/color/48/000000/visible.png"
+    },
+    {
+        "name": "LangSmith",
+        "icon": "https://img.icons8.com/color/48/000000/test-tube.png"
+    },
+    {
+        "name": "LlamaIndex",
+        "icon": "https://img.icons8.com/color/48/000000/llama.png"
+    },
+    {
+        "name": "CrewAI",
+        "icon": "https://img.icons8.com/color/48/000000/conference-call.png"
+    },
+    {
+        "name": "AutoGen",
+        "icon": "https://img.icons8.com/color/48/000000/bot.png"
+    },
+    {
+        "name": "OpenAI GPT-4o",
         "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+    },
+    {
+        "name": "Anthropic Claude",
+        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+    },
+    {
+        "name": "HuggingFace",
+        "icon": "https://img.icons8.com/color/48/000000/chatbot.png"
+    },
+    {
+        "name": "Ollama",
+        "icon": "https://img.icons8.com/color/48/000000/llama.png"
+    },
+    {
+        "name": "Mistral AI",
+        "icon": "https://img.icons8.com/color/48/000000/wind.png"
+    },
+    {
+        "name": "Gemini",
+        "icon": "https://img.icons8.com/color/48/000000/gemini.png"
+    },
+    {
+        "name": "RAG Systems",
+        "icon": "https://img.icons8.com/color/48/000000/search-in-cloud.png"
+    },
+    {
+        "name": "Pinecone",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "ChromaDB",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "Weaviate",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "FAISS",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "Qdrant",
+        "icon": "https://img.icons8.com/color/48/000000/database.png"
+    },
+    {
+        "name": "pgvector",
+        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
     },
     {
         "name": "TensorFlow",
@@ -28,6 +108,14 @@
         "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
     },
     {
+        "name": "MLflow",
+        "icon": "https://img.icons8.com/color/48/000000/biotech.png"
+    },
+    {
+        "name": "Selenium",
+        "icon": "https://img.icons8.com/color/48/000000/selenium-test-automation.png"
+    },
+    {
         "name": "Pandas",
         "icon": "https://img.icons8.com/color/48/000000/pandas.png"
     },
@@ -36,48 +124,32 @@
         "icon": "https://img.icons8.com/color/48/000000/numpy.png"
     },
     {
-        "name": "OpenAI API",
-        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+        "name": "Celery",
+        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
     },
     {
-        "name": "LangChain",
-        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+        "name": "SQLAlchemy",
+        "icon": "https://img.icons8.com/color/48/000000/sql.png"
     },
     {
-        "name": "LangGraph",
-        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+        "name": "Pydantic",
+        "icon": "https://img.icons8.com/color/48/000000/checklist.png"
     },
     {
-        "name": "HuggingFace",
-        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
+        "name": "REST API",
+        "icon": "https://img.icons8.com/color/48/000000/api.png"
     },
     {
-        "name": "Pinecone",
-        "icon": "https://img.icons8.com/color/48/000000/database.png"
+        "name": "GraphQL",
+        "icon": "https://img.icons8.com/color/48/000000/graphql.png"
     },
     {
-        "name": "ChromaDB",
-        "icon": "https://img.icons8.com/color/48/000000/database.png"
+        "name": "gRPC",
+        "icon": "https://img.icons8.com/color/48/000000/api-settings.png"
     },
     {
-        "name": "FAISS",
-        "icon": "https://img.icons8.com/color/48/000000/database.png"
-    },
-    {
-        "name": "Vector Databases",
-        "icon": "https://img.icons8.com/color/48/000000/database.png"
-    },
-    {
-        "name": "Anthropic Claude",
-        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
-    },
-    {
-        "name": "RAG Systems",
-        "icon": "https://img.icons8.com/color/48/000000/artificial-intelligence.png"
-    },
-    {
-        "name": "Apache Spark",
-        "icon": "https://img.icons8.com/color/48/000000/spark.png"
+        "name": "WebSockets",
+        "icon": "https://img.icons8.com/color/48/000000/socket.png"
     },
     {
         "name": "AWS Lambda",
@@ -96,7 +168,7 @@
         "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
     },
     {
-        "name": "AWS CloudFormation",
+        "name": "AWS DynamoDB",
         "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
     },
     {
@@ -108,12 +180,12 @@
         "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
     },
     {
-        "name": "REST API",
-        "icon": "https://img.icons8.com/color/48/000000/api.png"
+        "name": "AWS Bedrock",
+        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
     },
     {
-        "name": "GraphQL",
-        "icon": "https://img.icons8.com/color/48/000000/graphql.png"
+        "name": "AWS EventBridge",
+        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
     },
     {
         "name": "Docker",
@@ -124,34 +196,6 @@
         "icon": "https://img.icons8.com/color/48/000000/kubernetes.png"
     },
     {
-        "name": "Redis",
-        "icon": "https://img.icons8.com/color/48/000000/redis.png"
-    },
-    {
-        "name": "Celery",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "SQLAlchemy",
-        "icon": "https://img.icons8.com/color/48/000000/sql.png"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "Elasticsearch",
-        "icon": "https://img.icons8.com/color/48/000000/elasticsearch.png"
-    },
-    {
-        "name": "Jenkins",
-        "icon": "https://img.icons8.com/color/48/000000/jenkins.png"
-    },
-    {
         "name": "GitHub Actions",
         "icon": "https://img.icons8.com/color/48/000000/github--v1.png"
     },
@@ -160,12 +204,48 @@
         "icon": "https://img.icons8.com/color/48/000000/terraform.png"
     },
     {
+        "name": "Nginx",
+        "icon": "https://img.icons8.com/color/48/000000/nginx.png"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
+    },
+    {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+    },
+    {
+        "name": "MongoDB",
+        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
+    },
+    {
+        "name": "Redis",
+        "icon": "https://img.icons8.com/color/48/000000/redis.png"
+    },
+    {
+        "name": "Elasticsearch",
+        "icon": "https://img.icons8.com/color/48/000000/elasticsearch.png"
+    },
+    {
+        "name": "Apache Kafka",
+        "icon": "https://img.icons8.com/color/48/000000/apache-kafka.png"
+    },
+    {
+        "name": "RabbitMQ",
+        "icon": "https://img.icons8.com/color/48/000000/rabbitmq.png"
+    },
+    {
         "name": "Grafana",
         "icon": "https://img.icons8.com/color/48/000000/grafana.png"
     },
     {
-        "name": "Prometheus",
-        "icon": "https://img.icons8.com/color/48/000000/prometheus-app.png"
+        "name": "New Relic",
+        "icon": "https://img.icons8.com/color/48/000000/dashboard.png"
+    },
+    {
+        "name": "CloudWatch",
+        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
     },
     {
         "name": "Git VCS",
@@ -184,11 +264,7 @@
         "icon": "https://img.icons8.com/color/48/000000/api-settings.png"
     },
     {
-        "name": "Data Engineering",
-        "icon": "https://img.icons8.com/color/48/000000/database.png"
-    },
-    {
-        "name": "Apache Airflow",
-        "icon": "https://img.icons8.com/color/48/000000/workflow.png"
+        "name": "TypeScript",
+        "icon": "https://img.icons8.com/color/48/000000/typescript.png"
     }
 ]
