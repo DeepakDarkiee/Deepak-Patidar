@@ -53,7 +53,7 @@
     },
     {
         "name": "HuggingFace",
-        "icon": "https://img.icons8.com/color/48/000000/chatbot.png"
+        "icon": "https://img.icons8.com/fluency/48/000000/robot.png"
     },
     {
         "name": "Ollama",
@@ -69,7 +69,7 @@
     },
     {
         "name": "RAG Systems",
-        "icon": "https://img.icons8.com/color/48/000000/search-in-cloud.png"
+        "icon": "https://img.icons8.com/color/48/000000/search-more.png"
     },
     {
         "name": "Pinecone",
@@ -149,7 +149,7 @@
     },
     {
         "name": "WebSockets",
-        "icon": "https://img.icons8.com/color/48/000000/socket.png"
+        "icon": "https://img.icons8.com/color/48/000000/connected.png"
     },
     {
         "name": "AWS Lambda",
@@ -229,11 +229,11 @@
     },
     {
         "name": "Apache Kafka",
-        "icon": "https://img.icons8.com/color/48/000000/apache-kafka.png"
+        "icon": "https://img.icons8.com/color/48/000000/queue.png"
     },
     {
         "name": "RabbitMQ",
-        "icon": "https://img.icons8.com/color/48/000000/rabbitmq.png"
+        "icon": "https://img.icons8.com/color/48/000000/rabbit.png"
     },
     {
         "name": "Grafana",
