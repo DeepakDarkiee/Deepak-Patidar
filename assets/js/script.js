@@ -157,7 +157,7 @@ document.addEventListener('visibilitychange', function () {
    SKILLS — fetch & render from skills.json
    ============================================================ */
 (function () {
-  fetch('skills.json')
+  fetch('/skills.json')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (skills) {
       var container = document.getElementById('skillsContainer');
